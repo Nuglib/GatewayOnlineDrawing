@@ -1,0 +1,317 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>darp</title>-->
+<!--<meta content="width=device-width">-->
+<!--<style>-->
+<!--body {-->
+<!--padding: 25px;-->
+<!--}-->
+<!--.row {-->
+<!--width: 800px;-->
+<!--padding: 10px;-->
+<!--border: 1px solid #ccc;-->
+<!--border-radius: 5px;-->
+<!--margin-bottom: 50px;-->
+<!--}-->
+
+<!--.tabsBox {-->
+<!--height: 350px;-->
+<!--}-->
+<!--#new {-->
+<!--display: none;-->
+<!--width: 100%;-->
+<!--height: 100%;-->
+<!--}-->
+<!--.tab,.oldTab{-->
+<!--padding:3px 5px;-->
+<!--margin: 0 10px 10px 0;-->
+<!--display: inline-block;-->
+<!--border:1px solid #2290ee;-->
+<!--border-radius: 3px;-->
+<!--}-->
+<!--.oldTab{-->
+<!--border:1px solid #cccccc;-->
+<!--}-->
+<!--.delect{-->
+<!--cursor: pointer;-->
+<!--color: red;-->
+<!--}-->
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="row">-->
+<!--<p id="old" draggable="false" data-id="">-->
+<!--<span class="oldTab" data-id="1">ID：1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deleniti doloribus ea incidunt libero natus provident soluta tenetur voluptatem. Ad, dicta distinctio eveniet fugiat libero molestiae nulla quae rerum veniam.</span>-->
+<!--<span class="oldTab" data-id="2">ID：2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, assumenda blanditiis culpa deleniti doloribus eius et in ipsa itaque minima minus nemo nobis nostrum perferendis praesentium repellat saepe ut veniam.</span>-->
+<!--<span class="oldTab" data-id="3">ID：3  Ab adipisci animi blanditiis cum, debitis ea expedita magni molestiae natus, nobis nostrum odio quibusdam quisquam quod repellat repudiandae saepe sapiente sit soluta tempora velit, veniam voluptas voluptate voluptates voluptatum.</span>-->
+<!--<span class="oldTab" data-id="4">ID：4  Aut consectetur cupiditate distinctio dolores exercitationem ipsum obcaecati quisquam reiciendis tenetur. Blanditiis consequatur delectus eveniet excepturi hic illum iure laborum laudantium mollitia necessitatibus nulla perspiciatis, reprehenderit, similique sit voluptatem voluptatibus!</span>-->
+<!--<span class="oldTab" data-id="5">ID：5  Ab amet assumenda doloribus fuga hic impedit ipsa iure magni necessitatibus sunt. Adipisci beatae blanditiis delectus dignissimos dolores, ipsam, iste laborum pariatur porro repellendus saepe similique vero, voluptatem! Eligendi, voluptatem?</span>-->
+<!--<span class="oldTab" data-id="6">ID：6  A deleniti eum nostrum tempore veniam? Culpa eum hic natus numquam perspiciatis placeat sequi tempore! Amet aperiam debitis dolorem ea eaque et hic magni molestias quidem repudiandae. Aspernatur, quis, tenetur.</span>-->
+<!--</p>-->
+<!--asdf-->
+<!--</div>-->
+<!--<div id="tabsBox" class="row tabsBox">-->
+<!--<script>-->
+
+<!--document.addEventListener("drop", function (event) {-->
+<!--// 阻止默认动作（如打开一些元素的链接）-->
+<!--event.preventDefault();-->
+<!--var id = event.dataTransfer.getData("id");//拖拽对应的id-->
+<!--var text = event.dataTransfer.getData("text");//获取拖拽的文本-->
+<!--var NY = event.dataTransfer.getData("NY");//获取判断拖拽的元素是否是数据所在元素-->
+<!--// 移动拖动的元素到所选择的放置目标节点时判断，如果是加添加tab，反之不添加-->
+<!--if(NY=="true"){-->
+<!--//判断是否是对应的元素-->
+<!--if (event.target.id == "tabsBox") {-->
+<!--var tab = document.createElement("span");//生成一个span元素包住拖放的文本内容-->
+<!--tab.className = "tab";-->
+<!--tab.innerText = "id:" + id + "'"+ text + "' ";-->
+<!--tab.dataset.id = id;-->
+<!--event.target.appendChild(tab);-->
+<!--}-->
+<!--}-->
+<!--}, false);-->
+
+
+<!--</script>-->
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--<title>Document</title>-->
+<!--<style>-->
+
+<!--div{-->
+
+<!--width: 400px;-->
+
+<!--padding: 20px;-->
+
+<!--border:4px solid #ccc;-->
+
+<!--margin:20px auto;-->
+<!--}-->
+
+<!--#target{-->
+
+<!--border:4px dashed #666;-->
+
+<!--min-height: 100px;-->
+
+<!--line-height: 30px;-->
+
+<!--transition: .3;-->
+<!--}-->
+
+<!--img{-->
+
+<!--width: 100%;-->
+<!--}-->
+<!--#text{-->
+<!--position: absolute;-->
+<!--top: 20%;-->
+<!--left: 10%;-->
+<!--}-->
+
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="box">-->
+<!--如今全球都面临着严峻的能源和环境污染问题，而这也推动了生物能源的发展。最近国家发展改革委、国家能源局、财政部等十五部门联合印发了《关于扩大生物燃料乙醇生产和推广使用车用乙醇汽油的实施方案》，欲在2020年全国范围内基本实现车用E10乙醇汽油全覆盖，2025年力争纤维素乙醇实现规模化生产，形成更加完善的市场化运行机制。-->
+<!--</div>-->
+<!--<div id="img"><img src="../img/dalunfantu.png" id="innerImg"/>-->
+
+<!--</div>-->
+<!--<div id="target">-->
+
+<!--</div>-->
+<!--<textarea  id="text">-->
+
+<!--</textarea>-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;//这个是元素正在拖动到放置目标时触发&ndash;&gt;-->
+<!--&lt;!&ndash;document.ondragover = function(e){&ndash;&gt;-->
+
+<!--&lt;!&ndash;e.preventDefault();//防止拖动时打来url&ndash;&gt;-->
+<!--&lt;!&ndash;console.log("元素正在拖动到放置目标时触发")&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;// 在一个拖动过程中，释放鼠标键时触发此事件&ndash;&gt;-->
+<!--&lt;!&ndash;document.ondrop = function(e){&ndash;&gt;-->
+
+<!--&lt;!&ndash;e.preventDefault();&ndash;&gt;-->
+<!--&lt;!&ndash;console.log(" 在一个拖动过程中，释放鼠标键时触发此事件")&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;target.ondragenter = function(){&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;this.style.borderColor = '#000';&ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;target.ondragleave = function(){&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;this.style.borderColor = '#666';&ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;target.ondrop = function(e){&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;if(e.dataTransfer.files.length){&ndash;&gt;-->
+
+<!--&lt;!&ndash;console.log("111")&ndash;&gt;-->
+<!--&lt;!&ndash;target.onchange = function(){&ndash;&gt;-->
+<!--&lt;!&ndash;var fr = new FileReader();&ndash;&gt;-->
+<!--&lt;!&ndash;var file = ipt.files[i];&ndash;&gt;-->
+<!--&lt;!&ndash;console.log(file);&ndash;&gt;-->
+<!--&lt;!&ndash;fr.readAsDataURL(file);&ndash;&gt;-->
+<!--&lt;!&ndash;fr.onload = function(){&ndash;&gt;-->
+<!--&lt;!&ndash;var img = document.createElement('img');&ndash;&gt;-->
+<!--&lt;!&ndash;img.src=this.result;&ndash;&gt;-->
+<!--&lt;!&ndash;document.body.appendChild(img);&ndash;&gt;-->
+<!--&lt;!&ndash;document.body.innerHTML += file.name+' '+ file.lastModifiedDate+' '+ (file.size/1024).toFixed(1)+'kb '+file.type;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;}else{&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;var _src = e.dataTransfer.getData('text/uri-list');&ndash;&gt;-->
+<!--&lt;!&ndash;console.log("as")&ndash;&gt;-->
+
+<!--&lt;!&ndash;if(_src){&ndash;&gt;-->
+<!--&lt;!&ndash;console.log("000")&ndash;&gt;-->
+<!--&lt;!&ndash;var img = new Image();&ndash;&gt;-->
+
+<!--&lt;!&ndash;img.src = _src;&ndash;&gt;-->
+
+<!--&lt;!&ndash;target.appendChild(img);&ndash;&gt;-->
+
+<!--&lt;!&ndash;}else{&ndash;&gt;-->
+<!--&lt;!&ndash;console.log("YYY")&ndash;&gt;-->
+<!--&lt;!&ndash;var t = e.dataTransfer.getData('text/plain');&ndash;&gt;-->
+
+<!--&lt;!&ndash;target.innerHTML += t;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #box {
+            width: 80%;
+            height: 300px;
+            background-color: #f00;
+            margin: 50px auto;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .aa {
+            width: 100px;
+            height: 30px;
+            border: 5px solid #ccc;
+        }
+
+        .aa:active {
+            border: 5px solid #000;
+        }
+    </style>
+</head>
+<body>
+<img src="../img/dalunfantu.png"/>
+
+这里是拖拽的文字样式，这里是拖拽的文字样式！
+
+<div class="aa">点击拿图片</div>
+<div class="aa">点击拿文本</div>
+<div id="box">
+
+</div>
+<textarea style="width: 60%;height: 200px;position: absolute;top: 80%;left: 20%;" >
+</textarea>
+<script>
+    /*
+        FileReader API 用于读取文件，即把文件内容读入内存，是一种异步文件读取机制，它的参数是 File 对象或 Blob 对象。对于不同类型的文件，FileReader 提供不同的方法读取文件。
+    */
+    const box = document.getElementById("box");
+    const aa = document.getElementsByClassName("aa");
+    var float = true;
+    aa[0].onclick = function () {
+        float = true;
+    }
+    aa[1].onclick = function () {
+        float = false;
+    }
+    box.ondragover = function (e) {     //当有物体拖动上来时触发
+        e.preventDefault();     //阻止默认事件
+        e.stopPropagation();    //阻止冒泡事件
+        return false;
+    }
+    box.ondrop = function (e) {   //拖动在物体上释放鼠标时触发
+        //数据处理
+        var dataTransfer = e.dataTransfer;
+        console.log(dataTransfer)
+        if (!float) {
+            var text = dataTransfer.getData('Text');    //是文字拿到Text
+            console.log(text)
+            this.innerHTML = `${text}`
+            return false;
+        }
+        //url对象
+        var url = dataTransfer.getData('url');      //是图片拿到路径
+        console.log(url)
+        this.innerHTML = `<img width="300" src='${url}'/>`
+
+
+        //一下是通过FileReade()获取图片的base64编码  它是对图片本身字节进行编码不是路径 可以说就是一张图片
+        var fileData = e.dataTransfer.files.item(0);
+        if (fileData === null) return;  //不是外部拖入的图片跳出，内部拖入图片没有fileData
+        console.log(fileData)
+        //new FileReade() 读取文本的信息
+        var reader = new FileReader(); // 读取文本的信息；
+        reader.readAsDataURL(fileData); //读取文件内容 进行onload加载
+        //进行加载：
+        reader.onload = function (e) {
+            console.log(reader.result)  //读到该文本的结果；
+            box.innerHTML = `<img width="300" src='${reader.result}'/>`;
+        }
+
+        e.preventDefault();     //阻止默认事件
+        e.stopPropagation();    //阻止冒泡事件
+        return false;
+    }
+
+</script>
+</body>
+</html>

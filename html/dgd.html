@@ -1,0 +1,273 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+    <!--&lt;!&ndash;<meta charset="UTF-8">&ndash;&gt;-->
+    <!--&lt;!&ndash;<title>Title</title>&ndash;&gt;-->
+    <!--&lt;!&ndash;<style>&ndash;&gt;-->
+        <!--&lt;!&ndash;*{&ndash;&gt;-->
+            <!--&lt;!&ndash;margin: 0;&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+        <!--&lt;!&ndash;#box{&ndash;&gt;-->
+            <!--&lt;!&ndash;height: 100px;&ndash;&gt;-->
+            <!--&lt;!&ndash;width: 100px;&ndash;&gt;-->
+            <!--&lt;!&ndash;background: red;&ndash;&gt;-->
+            <!--&lt;!&ndash;position: absolute;&ndash;&gt;-->
+            <!--&lt;!&ndash;cursor: move;&ndash;&gt;-->
+            <!--&lt;!&ndash;background-size: 100px 100px;&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;</style>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<div id="box">&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;var box = document.getElementById("box");&ndash;&gt;-->
+    <!--&lt;!&ndash;fztz(box);&ndash;&gt;-->
+    <!--&lt;!&ndash;function fztz(id){&ndash;&gt;-->
+        <!--&lt;!&ndash;id.onmousedown = function(evt){&ndash;&gt;-->
+            <!--&lt;!&ndash;var e = evt || event;&ndash;&gt;-->
+            <!--&lt;!&ndash;var ofX = e.offsetX;&ndash;&gt;-->
+            <!--&lt;!&ndash;var ofY = e.offsetY;&ndash;&gt;-->
+            <!--&lt;!&ndash;document.onmousemove = function(evt){&ndash;&gt;-->
+                <!--&lt;!&ndash;var e = evt || event;&ndash;&gt;-->
+                <!--&lt;!&ndash;var x = e.pageX - ofX;&ndash;&gt;-->
+                <!--&lt;!&ndash;var y = e.pageY - ofY;&ndash;&gt;-->
+                <!--&lt;!&ndash;if(x<0){&ndash;&gt;-->
+                    <!--&lt;!&ndash;x = 0;&ndash;&gt;-->
+                <!--&lt;!&ndash;}&ndash;&gt;-->
+                <!--&lt;!&ndash;var maxX = window.innerWidth - id.offsetWidth;&ndash;&gt;-->
+                <!--&lt;!&ndash;if(x>maxX){&ndash;&gt;-->
+                    <!--&lt;!&ndash;x = maxX;&ndash;&gt;-->
+                <!--&lt;!&ndash;}&ndash;&gt;-->
+                <!--&lt;!&ndash;if(y<0){&ndash;&gt;-->
+                    <!--&lt;!&ndash;y = 0;&ndash;&gt;-->
+                <!--&lt;!&ndash;}&ndash;&gt;-->
+                <!--&lt;!&ndash;var maxY = window.innerHeight - id.offsetHeight;&ndash;&gt;-->
+                <!--&lt;!&ndash;if(y>maxY){&ndash;&gt;-->
+                    <!--&lt;!&ndash;y = maxY;&ndash;&gt;-->
+                <!--&lt;!&ndash;}&ndash;&gt;-->
+                <!--&lt;!&ndash;id.style.left = x + "px";&ndash;&gt;-->
+                <!--&lt;!&ndash;id.style.top = y + "px";&ndash;&gt;-->
+            <!--&lt;!&ndash;}&ndash;&gt;-->
+            <!--&lt;!&ndash;document.onmouseup = function(){&ndash;&gt;-->
+                <!--&lt;!&ndash;document.onmousemove = "";&ndash;&gt;-->
+            <!--&lt;!&ndash;}&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+
+
+<!--<html><head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>来回拖放效果</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--&lt;!&ndash;<div id="source" style="border: 1px solid brown;width: 300px;height: 200px;">&ndash;&gt;-->
+    <!--&lt;!&ndash;<h3>项目</h3>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div id="ck" draggable="true" οndragstart="dsHandler(event)">中电科</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div id="ff" draggable="true" οndragstart="dsHandler(event)">研究所</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div id="nv" draggable="true" οndragstart="dsHandler(event)">北斗卫星</div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<br/><br/>&ndash;&gt;-->
+<!--&lt;!&ndash;<div id="dest" style="border: 1px solid black; width: 300px;height: 200px ;" draggable="true">&ndash;&gt;-->
+    <!--&lt;!&ndash;<h2 οndragleave="return false;">收藏夹</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script type="text/javascript">&ndash;&gt;-->
+    <!--&lt;!&ndash;//开始拖动&ndash;&gt;-->
+    <!--&lt;!&ndash;var dsHandler=function(evt){&ndash;&gt;-->
+        <!--&lt;!&ndash;evt.dataTransfer.setData("text/plain","<item>" +evt.target.id +evt.target.innerHTML);&ndash;&gt;-->
+
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+
+    <!--&lt;!&ndash;//放开元素事件&ndash;&gt;-->
+    <!--&lt;!&ndash;var dest=document.getElementById("dest");&ndash;&gt;-->
+    <!--&lt;!&ndash;console.log("dest",dest)&ndash;&gt;-->
+
+    <!--&lt;!&ndash;var source=document.getElementById("source");&ndash;&gt;-->
+    <!--&lt;!&ndash;console.log("source",source)&ndash;&gt;-->
+
+    <!--&lt;!&ndash;dest.οndrοp=function(evt){&ndash;&gt;-->
+        <!--&lt;!&ndash;console.log("smda")&ndash;&gt;-->
+<!--&lt;!&ndash;//取出传输的内容&ndash;&gt;-->
+        <!--&lt;!&ndash;var content=evt.dataTransfer.getData("text/plain");&ndash;&gt;-->
+        <!--&lt;!&ndash;console.log("content",content)&ndash;&gt;-->
+
+        <!--&lt;!&ndash;if (content.indexOf("<item>")==0) {&ndash;&gt;-->
+            <!--&lt;!&ndash;var newFile=document.createElement("div");&ndash;&gt;-->
+            <!--&lt;!&ndash;newFile.id=content.substring(6,8);&ndash;&gt;-->
+            <!--&lt;!&ndash;newFile.innerHTML=content.substring(8);&ndash;&gt;-->
+            <!--&lt;!&ndash;newFile.draggable="true";&ndash;&gt;-->
+                <!--&lt;!&ndash;console.log("我开始拖拽了")&ndash;&gt;-->
+<!--&lt;!&ndash;//定义新元素的开始拖拽事件&ndash;&gt;-->
+            <!--&lt;!&ndash;newFile.οndragstart=function(evt){&ndash;&gt;-->
+                <!--&lt;!&ndash;evt.dataTransfer.setData("text/plain","<item>" +evt.target.id +evt.target.innerHTML);&ndash;&gt;-->
+            <!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--&lt;!&ndash;//在dest框中添加移动的元素&ndash;&gt;-->
+            <!--&lt;!&ndash;dest.appendChild(newFile);&ndash;&gt;-->
+<!--&lt;!&ndash;//同时删除源框中的元素&ndash;&gt;-->
+<!--&lt;!&ndash;//             moveObj=document.getElementById(content.substring(6,8));//content.substring(6,8)是id（ck,ff,nv）&ndash;&gt;-->
+<!--&lt;!&ndash;//             source.removeChild(moveObj);&ndash;&gt;-->
+<!--&lt;!&ndash;console.log(content.substring(6,8));&ndash;&gt;-->
+
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+
+    <!--&lt;!&ndash;source.οndrοp=function(evt){&ndash;&gt;-->
+        <!--&lt;!&ndash;var sourceContent=evt.dataTransfer.getData("text/plain");&ndash;&gt;-->
+        <!--&lt;!&ndash;if (sourceContent.indexOf("<item>")==0) {&ndash;&gt;-->
+            <!--&lt;!&ndash;moveDestObj=document.getElementById(sourceContent.substring(6,8));&ndash;&gt;-->
+            <!--&lt;!&ndash;//console.log(moveDestObj.ondragstart)&ndash;&gt;-->
+            <!--&lt;!&ndash;source.appendChild(moveDestObj);&ndash;&gt;-->
+
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;document.οndrοp=function(evt){&ndash;&gt;-->
+        <!--&lt;!&ndash;return false;&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+    <!--&lt;!&ndash;document.οndragοver=function(evt){&ndash;&gt;-->
+        <!--&lt;!&ndash;return false;&ndash;&gt;-->
+    <!--&lt;!&ndash;}&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <!--<title>简单拖曵原理实例</title>-->
+    <!--<style type="text/css">-->
+        <!--#drag{width:400px;height:300px;background:url(http://upload.yxgz.cn/uploadfile/2009/0513/20090513052611873.jpg);cursor:move;position:absolute;top:100px;left:100px;border:solid 1px #ccc;}-->
+        <!--h2{color:#fff;background: none repeat scroll 0 0 rgba(16, 90, 31, 0.7);color:#FFFFFF;height:40px;line-height:40px;margin:0;}-->
+    <!--</style>-->
+    <!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">-->
+    <!--</script>    <script type="text/javascript">-->
+    <!--$(function(){-->
+        <!--/*&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;拖曳效果&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <!--*原理：标记拖曳状态dragging ,坐标位置iX, iY-->
+        <!--*         mousedown:fn(){dragging = true, 记录起始坐标位置，设置鼠标捕获}-->
+        <!--*         mouseover:fn(){判断如果dragging = true, 则当前坐标位置 - 记录起始坐标位置，绝对定位的元素获得差值}-->
+        <!--*         mouseup:fn(){dragging = false, 释放鼠标捕获，防止冒泡}-->
+        <!--*/-->
+        <!--var dragging = false;-->
+        <!--var iX, iY;-->
+        <!--$("#drag").mousedown(function(e) {-->
+            <!--dragging = true;-->
+            <!--iX = e.clientX - this.offsetLeft;-->
+            <!--iY = e.clientY - this.offsetTop;-->
+            <!--this.setCapture && this.setCapture();-->
+            <!--return false;-->
+        <!--});-->
+        <!--document.onmousemove = function(e) {-->
+            <!--if (dragging) {-->
+                <!--var e = e || window.event;-->
+                <!--var oX = e.clientX - iX;-->
+                <!--var oY = e.clientY - iY;-->
+                <!--$("#drag").css({"left":oX + "px", "top":oY + "px"});-->
+                <!--return false;-->
+            <!--}-->
+        <!--};-->
+        <!--$(document).mouseup(function(e) {-->
+            <!--dragging = false;-->
+            <!--$("#drag")[0].releaseCapture();-->
+            <!--e.cancelBubble = true;-->
+        <!--})-->
+
+    <!--})-->
+
+<!--</script>-->
+
+
+<!--<body>-->
+<!--<div id="drag">-->
+    <!--<h2>来拖动我啊</h2>-->
+    <!--<input type="text"/>-->
+<!--</div>-->
+
+
+
+
+<!--</body></html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>简单拖曵原理实例</title>
+    <style type="text/css">
+        html,body {
+            height: 100%;
+        }
+        #shade {
+            position: fixed;
+            z-index: 999;
+            background-color: rgba(0,0,0,0.5);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #drag{width:400px;height:300px;background:url(http://upload.yxgz.cn/uploadfile/2009/0513/20090513052611873.jpg); cursor:move;position:absolute;top:100px;left:100px;border:solid 1px #ccc; z-index: 1000;}
+        h2{color:#fff;background: none repeat scroll 0 0 rgba(16, 90, 31, 0.7);color:#FFFFFF;height:40px;line-height:40px;margin:0;}
+    </style>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>    <script type="text/javascript">
+    $(function(){
+        /*--------------拖曳效果----------------
+        *原理：标记拖曳状态dragging ,坐标位置iX, iY
+        *         mousedown:fn(){dragging = true, 记录起始坐标位置，设置鼠标捕获}
+        *         mouseover:fn(){判断如果dragging = true, 则当前坐标位置 - 记录起始坐标位置，绝对定位的元素获得差值}
+        *         mouseup:fn(){dragging = false, 释放鼠标捕获，防止冒泡}
+        */
+        var dragging = false;
+        var iX, iY;
+        $("#drag input").mousedown(function(e) {
+            e.stopPropagation()
+        });
+        $("#drag").mousedown(function(e) {
+            dragging = true;
+            iX = e.clientX - this.offsetLeft;
+            iY = e.clientY - this.offsetTop;
+            this.setCapture && this.setCapture();
+            return false;
+        });
+        document.onmousemove = function(e) {
+            if (dragging) {
+                var e = e || window.event;
+                var oX = e.clientX - iX;
+                var oY = e.clientY - iY;
+                $("#drag").css({"left":oX + "px", "top":oY + "px"});
+                return false;
+            }
+        };
+        $(document).mouseup(function(e) {
+            dragging = false;
+            $("#drag")[0].releaseCapture();
+            e.cancelBubble = true;
+        })
+
+    })
+
+</script>
+</head>
+
+<body>
+<div id="shade"></div>
+<div id="drag">
+    <h2>来拖动我啊</h2>
+    <input type="text"/>
+</div>
+
+</body>
+</html>
