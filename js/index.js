@@ -3,33 +3,42 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/imageController/getimagebanner',
+        url: 'http://118.190.58.216/online/imageController/getimagebanner',
         success: function (data) {
             console.log("轮播", data.object)
             var arr = data.object;
             var html = "";
             for (var i = 0; i < arr.length; i++) {
                 html += '<div class="item active">' +
-                    '<img src="' + arr[0].imagePath + '"/>' +
+                    '<img style="width:100%;height:100%" src="' + arr[0].imagePath + '"/>' +
                     '</div>' +
                     '<div class="item">' +
-                    '<img src="' + arr[1].imagePath + '"/>' +
+                    '<img  style="width:100%;height:100%" src="' + arr[1].imagePath + '"/>' +
                     '</div>' +
                     '<div class="item">' +
-                    '<img src="' + arr[2].imagePath + '"/>' +
+                    '<img  style="width:100%;height:100%" src="' + arr[2].imagePath + '"/>' +
                     '</div>'
             }
             $("#planting").html(html)
+			$("#planting div img").click(function(){ 
+				$("#wrap-img").css("display","block")
+				var m=$(this).attr("src")
+				$("#click_photo img").attr("src",m)
+				alert($("#click_photo img").attr("src"))
+			})
         },
     })
 })
+
+
+
 
 //最新图
 $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/imageController/getnewestimage',
+        url: 'http://118.190.58.216/online/imageController/getnewestimage',
         success: function (data) {
             console.log("最新图轮播", data.object)
             var arr = data.object;
@@ -61,7 +70,7 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/imageController/getnewhotimages',
+        url: 'http://118.190.58.216/online/imageController/getnewhotimages',
         success: function (data) {
             console.log("最热图轮播", data.object)
             var arr = data.object;
@@ -92,7 +101,7 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/writtController/getnewword',
+        url: 'http://118.190.58.216/online/writtController/getnewword',
         success: function (data) {
             console.log("最新文字", data.object)
             var arr = data.object;
@@ -125,7 +134,7 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/writtController/gethotword',
+        url: 'http://118.190.58.216/online/writtController/gethotword',
         success: function (data) {
             console.log("最新文字", data.object)
             var arr = data.object;
@@ -158,7 +167,7 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/imageController/getimagestyleelement',
+        url: 'http://118.190.58.216/online/imageController/getimagestyleelement',
         success: function (data) {
             console.log(data.object)
             var fj = data.object.fj;
@@ -207,9 +216,43 @@ $(function () {
                     '</div>'
             }
             $("#for_ym").html(for_ym)
+			$(".element_style_title_phone img").click(function(){
+				$("#wrap-img").css("display","block")
+				var m=$(this).attr("src")
+				$("#click_photo img").attr("src",m)
+			
+				
+			})
+			$(".element_style_title img").click(function(){
+				$("#wrap-img").css("display","block")
+				var m=$(this).attr("src")
+				$("#click_photo img").attr("src",m)
+				alert($(this).attr("src")); 
+			})
+			
         },
     })
 })
+
+
+//logo早晚an
+$(function(){
+	// PC
+	$(".element_style_center_photo img").click(function(){
+		$("#wrap-img_logo").css("display","block")
+		var m=$(this).attr("src")
+		$("#small img").attr("src",m)
+		alert($(this).attr("src")); 
+	})
+	// 手机
+	$(".four_img img").click(function(){
+		$("#wrap-img_logo").css("display","block")
+		var m=$(this).attr("src")
+		$("#small img").attr("src",m)
+		alert($(this).attr("src")); 
+	})
+})
+
 
 
 //文字风格
@@ -218,7 +261,7 @@ $(function () {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://192.168.0.124:8080/writtController/getwrittenstyle',
+        url: 'http://118.190.58.216/online/writtController/getwrittenstyle',
         success: function (data) {
             console.log("文系风格", data)
             var fj = data.object.fj;
@@ -267,8 +310,22 @@ $(function () {
                     '</div>'
             }
             $("#text_ym").html(text_ym)
-
-
+			
+			//点击文字更多
+			$(".element_style_title_testing p").click(function(){
+				var m=$(this).html()
+				$("#edit p").html(m)
+			})
+			
+			$(".element_style_titled p").click(function(){
+				var m=$(this).html()
+				$("#edit p").html(m)
+			})
+			
+			$(".element_style_title_test p").click(function(){
+				var m=$(this).html()
+				$("#edit p").html(m)
+			})
         },
     })
 })
@@ -288,7 +345,23 @@ $(function () {
     }, function () {
 
     });
+	var $div = $(".element_style_center_right_center div .element_style_more");
+	$div.click(function () {
+	    $(".style_img").toggle(1500);
+	    $(".style_img").css("display", "block");
+	    var index = $div.index(this);
+	    $(".style_img>div").eq(index).show()
+	        .siblings().hide();
+	}).hover(function () {  //了鼠标滑过特效
+	
+	}, function () {
+	
+	});
 });
+
+
+
+
 
 //文字点击显示消失
 
@@ -305,7 +378,20 @@ $(function () {
     }, function () {
 
     });
+	var $div = $("#tuwen  div .element_style_mored");
+	$div.click(function () {
+		console.log("sdsd")
+	    $(".style_text").toggle(1500);
+	    $(".style_text").css("display", "block");
+	    var index = $div.index(this);
+	    $(".style_text>div").eq(index).show()
+	        .siblings().hide();
+	}).hover(function () {         //定义了鼠标滑过特效
+	
+	}, function () {
+	
+	});
 });
 
 
-//生成图
+
