@@ -1,906 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<meta name="viewport" content="
     width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/rem.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/jquery.min.js"></script>
-	<script src="../js/jquery.panzoom.js"></script>
-	<script src="../js/jquery.mousewheel.js"></script>
-	<script src="https://cdn.bootcss.com/html2canvas/0.4.1/html2canvas.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
-	<link href="../css/froala_editor.css" rel="stylesheet" type="text/css">
-	<link href="../css/font-awesome.min.css" />
-	<link href="../css/froala_editor.min.css" />
-	<link href="../css/bootstrap.min.css" />
-    <!--[if lt IE 9]>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<script src="../js/rem.js"></script>
+		<script src="../js/index.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery.panzoom.js"></script>
+		<script src="../js/jquery.mousewheel.js"></script>
+		<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+		<link href="../css/froala_editor.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.min.css" />
+		<link href="../css/froala_editor.min.css" />
+		<link href="../css/bootstrap.min.css" />
+		<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-<div class="container_center">
-    <header class="container header">
-        <ul class="nav nav-pills">
-            <li role="presentation" class="active header_left">
-                <img src="../img/logo.png"/>
-            </li>
-            <li class="header_center">
-                文字
-            </li>
-            <li class="header_center_two">图片</li>
-        </ul>
-        
-    </header>
-	<!-- 头部结束 -->
-	
-	
-	
-	
-	
-    <!--banana 轮播开始-->
-    <section class="banana" >
-        <div class="banana_center">
-            <div class="col-md-12 column" style="height: 100%">
-                <div class="carousel slide" id="carousel-848726" style="height: 100%">
-                    <div class="carousel-inner" style="height: 100%" id="planting">
+	</head>
+	<div class="container_center">
+		<header class="container header">
+			<ul class="nav nav-pills">
+				<li role="presentation" class="active header_left">
+					<img src="../img/logo.png" />
+				</li>
+				<li class="header_center">
+					文字
+				</li>
+				<li class="header_center_two">图片</li>
+			</ul>
 
-                    </div>
-                    <a class="left carousel-control" href="#carousel-848726" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span></a>
-                    <a class="right carousel-control" href="#carousel-848726" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
+		</header>
+		<!-- 头部结束 -->
 
-        </div>
 
-    </section>
-	<!-- banana 轮播结束 -->
-	
-	
-	
-	
-    <!--公告-->
-    <section class="notice" >
-        <div class="title">
-            公告
-        </div>
-    </section>
-  
-   
-   
-    <!--元素风格-->
-    <section class="element_style" >
-        <ul class="element_style_center">
-			<!-- 手机版 图片等你 来挑 -->
-            <li class="heart_style">
-                <p>——N种图片——</p>
-                <p>更多风格元素你来挑！</p>
-            </li>
-			<!-- PC 手机 图片等你来 分类 -->
-            <li class="element_style_center_li" >
-                <div class="element_style_center_bottom">
-					<!-- 左边的图片  pc -->
-                    <div class="element_style_center_left">
-                        图片
-                    </div>
-					
-					<!-- PC 手机  图片 共有  但样式不同-->
-                    <ul class="element_style_center_right" >
-						<!-- PC 右侧 top 风格元素 -->
-						<li  class="style_fans">
-							<div class="element_style_center_top">
-							    风格元素
-							</div>
-							<div class="line"></div>
-						</li>
-						<!--PC  右侧 中间部分 分类 时尚等-->
-                        <li class="element_style_center_right_top" >
-                            <p class="element_style_title">
-                                时尚
-                            </p>
-                            <p class="element_style_title">
-                                优美
-                            </p>
-                            <p class="element_style_title">
-                                风景
-                            </p>
-                            <p class="element_style_title">
-                                商用
-                            </p>
-                        </li>
-						<!--PC 手机 每个分类的第一个图片 -->
-                        <li class="element_style_center_right_center" >
-                            <div class="element_style_title" >
-								<div class="element_style_title_phone" id="ss">
-									
-								</div>
-                                <p class="element_style_tit" >时尚</p>
-                                <p class="element_style_more">更多></p>
-                            </div>
-                            <div class="element_style_title" >
-								<div class="element_style_title_phone" id="ym">
-									
-								</div>
-                                <p class="element_style_tit" style="background:#ce8903">时尚</p>
-                                <p class="element_style_more" style="background:#ce8903">更多></p>
-                            </div>
-                            <div class="element_style_title" >
-								<div class="element_style_title_phone" id="fj">
-									
-								</div>
-                                <p class="element_style_tit" style="background:#0036ff">时尚</p>
-                                <p class="element_style_more" style="background:#0036ff">更多></p>
-                            </div>
-                            <div class="element_style_title">
-								<div class="element_style_title_phone" id="sy">
-									
-								</div>
-                                <p class="element_style_tit" style="background:#26b113">时尚</p>
-                                <p class="element_style_more" style="background:#26b113">更多></p>
 
-                            </div>
-                        </li>
-						<!-- PC 更多 more -->
-                        <li class="element_style_center_right_bottom">
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <!--点击显示-->
-            <li class="style_img" >
-                <div class="style_img_type" id="for_fj">
 
-                </div>
-                <div class="style_img_type " id="for_ss">
 
-                </div>
-                <div class="style_img_type " id="for_sy">
+		<!--banana 轮播开始-->
+		<section class="banana">
+			<div class="banana_center">
+				<div class="col-md-12 column" style="height: 100%">
+					<div class="carousel slide" id="carousel-848726" style="height: 100%">
+						<div class="carousel-inner" style="height: 100%" id="planting">
 
-                </div>
-                <div class="style_img_type " id="for_ym">
-
-                </div>
-            </li>
-			<!-- 手机 文字 title -->
-			<li class="heart_style" >
-                <p>——优美文字——</p>
-                <p>更多风格元素你来挑！</p>
-            </li>
-			<!-- PC 手机 -->
-            <li class="element_style_center_li_two">
-                
-                
-                <div class="element_style_center_bottom">
-                    <div class="element_style_center_left">
-                        文字
-                    </div>
-                    <ul class="element_style_center_right">
-						<li class="style_fans">
-							<div class="element_style_center_top">
-							    风格元素
-							</div>
-							<div class="line"></div>
-						</li>
-                        <li class="element_style_center_right_top">
-                            <p class="element_style_title">
-                                时尚
-                            </p>
-                            <p class="element_style_title">
-                                优美
-                            </p>
-                            <p class="element_style_title">
-                                风景
-                            </p>
-                            <p class="element_style_title">
-                                商用
-                            </p>
-                        </li>
-                        <li class="element_style_center_right_center tu_wen" id="tuwen">
-                            <div class="element_style_title_test" >
-								<div class="element_style_title_testing" id="ss_text">
-									 <p></p>
-								</div>
-                               <p class="element_style_tit" style="background:#FF7901">励志</p>
-							    <p class="element_style_mored" style="background:#FF7901">更多></p>
-                            </div>
-                            <div class="element_style_title_test">
-								<div class="element_style_title_testing"  id="ym_text">
-									 <p></p>
-								</div>
-                               <p class="element_style_tit" style="background:#C94C83">商用</p>
-                                <p class="element_style_mored" style="background:#C94C83">更多></p>
-                            </div>
-                            <div class="element_style_title_test " id="fj_text">
-                                <p></p>
-								
-                            </div>
-                            <div class="element_style_title_test " id="sy_text">
-
-                                <p></p>
-
-                            </div>
-                        </li>
-						
-                        <li class="element_style_center_right_bottom_two">
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                            <div class="element_style_title">
-                                <p class="more">更多</p>
-                                <p class="mores">More</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            
-			<li class="style_text" >
-                <div class="style_text_type " id="text_fj">
-
-                </div>
-                <div class="style_text_type " id="text_ss">
-
-                </div>
-                <div class="style_text_type " id="text_sy">
-
-                </div>
-                <div class="style_text_type " id="text_ym">
-
-                </div>
-            </li>
-            <li class="heart_style" style="margin-top: 1%;" >
-                <p>——进入场景——</p>
-                <p>随机生成你要的图片！</p>
-            </li>
-			<li class="logo_img" style="margin-bottom:2%;">
-
-				 
-				 <div id="myCarousel" class="carousel slide" style="width: 100%;height: 100%;">
-				 	<ol class="carousel-indicators">
-				 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				 	
-				 	</ol>  
-				 	<div class="carousel-inner" style="width: 100%;height: 100%;">
-				 		<div class="item active" style="width: 100%;height: 100%;" style="">
-				 			<div class="carousel-caption four_img" style="width80%;height: 100%;margin: auto;">
-				 				<img style="display: inline-block;" src="../img/morning.png" >
-				 				<img style="display: inline-block;" src="../img/changzaoan.png" >
-				 				<img style="display: inline-block;"  src="../img/wanan.png" >
-				 				<img style="display: inline-block;"  src="../img/chang_wanan.png" >
-				 			</div>
-				 			
-				 		
-				 		</div>
-				 		
-				 	</div>
-				 	<!-- 轮播（Carousel）导航 -->
-				 	
-				 </div> 
-				
-			</li>
-            <li class="element_style_center_li_three">
-				<!-- pc 端左侧 -->
-                <div class="element_style_center_photo">
-					<p class="enter">---进入场景---</p>
-					<img src="../img/morning.png" class="moring" alt="">
-					<img src="../img/changzaoan.png" class="chang_moring" alt="">
-					<img src="../img/wanan.png" class="wanan" alt="">
-					<img src="../img/chang_wanan.png" class="chang_wanna" alt="">
-					<img src="../img/more.png" class="more_img" alt="">
-                </div>
-				<!-- pc 端左侧结束 -->
-				<!-- pc 中间部分 -->
-				<div class="element_style_img_right">  
-					<div class="element_style_center_img" >
-						<div class="element_style_center_top_enter">
-							<p class="button" id="btn">随机生成</p>
-							<div class="chose" style="width: 24%;line-height: 0.38rem;">
-							    <select id="pid" onchange="gradeChange()">
-							        <option value="black">黑色</option>
-							        <option value="red">红色</option>
-							        <option value="yellow">黄色</option>
-							        <option value="blue">蓝色</option>
-							    </select>
-							</div>
-							
-							<span class="line_suiji"></span>
-							
 						</div>
-						
-						<div class="create" id="container">
-							<div class="create_img">
-								生成图片
-							</div>
-							<!-- 背景图 -->
-							<div hidden="hidden">
-								<input type="file" accept="image/*" onchange="getzImg(this)" value="" id="img_z"
-									   style="display:none"/>
-								<textarea id="img_z_base64"></textarea>
-							</div>
-							<div class="img_wp" onclick="upload(a)" id="click_photo">
-								<img id="wrap-img" src="#" height="230" width="210"  style="position: relative"/>
-								<!-- <img class="popule" id="cunfang" /> -->
-							</div>
-							<!-- 文字 -->
-							<div id="editor">
-							      <div id='edit' class="wenzi">
-							      </div>
-							</div>
-							
-						
-							
-							
-								
-								<!-- <p class="wenzi" contenteditable="true">点我添加文字</p> -->
+						<a class="left carousel-control" href="#carousel-848726" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="right carousel-control" href="#carousel-848726" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
 
-							<!-- 我是log  -->
-							
-							<div hidden="hidden">
-								<input type="file" accept="image/*" onchange="getzImg_logo(this)" value="" id="img_z_logo"
-									   style="display:none"/>
-								<textarea id="img_z_base64_logo"></textarea>
+			</div>
+
+		</section>
+		<!-- banana 轮播结束 -->
+
+
+
+
+		<!--公告-->
+		<section class="notice">
+			<div class="title">
+				所谓百闻不如一见，有时文字描述，还不及一帧历史照片所蕴藏的丰富内容。
+			</div>
+		</section>
+
+
+
+		<!--元素风格-->
+		<section class="element_style">
+			<ul class="element_style_center">
+				<!-- 手机版 图片等你 来挑 -->
+				<li class="heart_style">
+					<p>——N种图片——</p>
+					<p>更多风格元素你来挑！</p>
+				</li>
+				<!-- PC 手机 图片等你来 分类 -->
+				<li class="element_style_center_li">
+					<div class="element_style_center_bottom">
+						<!-- 左边的图片  pc -->
+						<div class="element_style_center_left">
+							图片
+						</div>
+
+						<!-- PC 手机  图片 共有  但样式不同-->
+						<ul class="element_style_center_right">
+							<!-- PC 右侧 top 风格元素 -->
+							<li class="style_fans">
+								<div class="element_style_center_top">
+									风格元素
+								</div>
+								<div class="line"></div>
+							</li>
+							<!--PC  右侧 中间部分 分类 时尚等-->
+							<li class="element_style_center_right_top">
+								<p class="element_style_title">
+									时尚
+								</p>
+								<p class="element_style_title">
+									优美
+								</p>
+								<p class="element_style_title">
+									风景
+								</p>
+								<p class="element_style_title">
+									商用
+								</p>
+							</li>
+							<!--PC 手机 每个分类的第一个图片 -->
+							<li class="element_style_center_right_center">
+								<div class="element_style_title">
+									<div class="element_style_title_phone" id="ss">
+
+									</div>
+									<p class="element_style_tit" title="点击查看更多">时尚</p>
+									<p class="element_style_more">更多></p>
+								</div>
+								<div class="element_style_title">
+									<div class="element_style_title_phone" id="ym">
+
+									</div>
+									<p class="element_style_tit" style="background:#ce8903">时尚</p>
+									<p class="element_style_more" style="background:#ce8903">更多></p>
+								</div>
+								<div class="element_style_title">
+									<div class="element_style_title_phone" id="fj">
+
+									</div>
+									<p class="element_style_tit" style="background:#0036ff">时尚</p>
+									<p class="element_style_more" style="background:#0036ff">更多></p>
+								</div>
+								<div class="element_style_title">
+									<div class="element_style_title_phone" id="sy">
+
+									</div>
+									<p class="element_style_tit" style="background:#26b113">时尚</p>
+									<p class="element_style_more" style="background:#26b113">更多></p>
+
+								</div>
+							</li>
+							<!-- PC 更多 more -->
+							<li class="element_style_center_right_bottom">
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<!--点击显示-->
+				<li class="style_img">
+					<div class="style_img_type" id="for_fj">
+
+					</div>
+					<div class="style_img_type " id="for_ss">
+
+					</div>
+					<div class="style_img_type " id="for_sy">
+
+					</div>
+					<div class="style_img_type " id="for_ym">
+
+					</div>
+				</li>
+				<!-- 手机 文字 title -->
+				<li class="heart_style">
+					<p>——优美文字——</p>
+					<p>更多风格元素你来挑！</p>
+				</li>
+				<!-- PC 手机 -->
+				<li class="element_style_center_li_two">
+
+
+					<div class="element_style_center_bottom">
+						<div class="element_style_center_left">
+							文字
+						</div>
+						<ul class="element_style_center_right">
+							<li class="style_fans">
+								<div class="element_style_center_top">
+									风格元素
+								</div>
+								<div class="line"></div>
+							</li>
+							<li class="element_style_center_right_top">
+								<p class="element_style_title">
+									时尚
+								</p>
+								<p class="element_style_title">
+									优美
+								</p>
+								<p class="element_style_title">
+									风景
+								</p>
+								<p class="element_style_title">
+									商用
+								</p>
+							</li>
+							<li class="element_style_center_right_center tu_wen" id="tuwen">
+								<div class="element_style_title_test">
+									<div class="element_style_title_testing" id="ss_text">
+										<p></p>
+									</div>
+									<p class="element_style_tit" style="background:#FF7901">励志</p>
+									<p class="element_style_mored" style="background:#FF7901">更多></p>
+								</div>
+								<div class="element_style_title_test">
+									<div class="element_style_title_testing" id="ym_text">
+										<p></p>
+									</div>
+									<p class="element_style_tit" style="background:#C94C83">商用</p>
+									<p class="element_style_mored" style="background:#C94C83">更多></p>
+								</div>
+								<div class="element_style_title_test " id="fj_text">
+									<p></p>
+
+								</div>
+								<div class="element_style_title_test " id="sy_text">
+
+									<p></p>
+
+								</div>
+							</li>
+
+							<li class="element_style_center_right_bottom_two">
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+								<div class="element_style_title">
+									<p class="more">更多</p>
+									<p class="mores">More</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="style_text">
+					<div class="style_text_type " id="text_fj">
+
+					</div>
+					<div class="style_text_type " id="text_ss">
+
+					</div>
+					<div class="style_text_type " id="text_sy">
+
+					</div>
+					<div class="style_text_type " id="text_ym">
+
+					</div>
+				</li>
+				<li class="heart_style" style="margin-top: 1%;">
+					<p>——进入场景——</p>
+					<p>随机生成你要的图片！</p>
+				</li>
+				<li class="logo_img" style="margin-bottom:2%;">
+
+
+					<div id="myCarousel" class="carousel slide" style="width: 100%;height: 100%;">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+						</ol>
+						<div class="carousel-inner" style="width: 100%;height: 100%;">
+							<div class="item active" style="width: 100%;height: 100%;" style="">
+								<div class="carousel-caption four_img" style="width80%;height: 100%;margin: auto;">
+									<img style="display: inline-block;" src="../img/morning.png">
+									<img style="display: inline-block;" src="../img/changzaoan.png">
+									<img style="display: inline-block;" src="../img/wanan.png">
+									<img style="display: inline-block;" src="../img/chang_wanan.png">
+								</div>
+
+
 							</div>
-							 <div id="small" class="pinch-zoomed" onmousedown="small_down(event)">
-								    <img src="#" id="wrap-img_logo">
+
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+
+					</div>
+
+				</li>
+				<li class="element_style_center_li_three">
+					<!-- pc 端左侧 -->
+					<div class="element_style_center_photo">
+						<p class="enter">---进入场景---</p>
+						<img src="../img/morning.png" class="moring" alt="">
+						<img src="../img/changzaoan.png" class="chang_moring" alt="">
+						<img src="../img/wanan.png" class="wanan" alt="">
+						<img src="../img/chang_wanan.png" class="chang_wanna" alt="">
+						<img src="../img/more.png" class="more_img" alt="">
+					</div>
+					<!-- pc 端左侧结束 -->
+					<!-- pc 中间部分 -->
+					<div class="element_style_img_right">
+						<div class="element_style_center_img">
+							<div class="element_style_center_top_enter">
+								<p class="button random" id="btn">随机生成</p>
+								
+
+								<span class="line_suiji"></span>
+
+							</div>
+
+							<div class="create" id="container">
+								<div class="create_img">
+									生成图片
+								</div>
+								<!-- 背景图 -->
+								<div hidden="hidden">
+									<input type="file" accept="image/*" onchange="getzImg(this)" value="" id="img_z" style="display:none" />
+									<textarea id="img_z_base64"></textarea>
+								</div>
+								<div class="img_wp" onclick="upload(a)" id="click_photo">
+									<img id="wrap-img" src="#" height="230" width="210" style="position: relative;display: none;" />
+									<img src="../img/shangchuan_img.png" class="beijing" alt="">
+								</div>
+								<!-- 文字 -->
+								<div id="editor">
+									<div id='edit' class="wenzi">
+									</div>
+								</div>
+
+								<!-- 我是log  -->
+
+								<div hidden="hidden">
+									<input type="file" accept="image/*" onchange="getzImg_logo(this)" value="" id="img_z_logo" style="display:none" />
+									<textarea id="img_z_base64_logo"></textarea>
+								</div>
+								<div id="small" class="pinch-zoomed" onmousedown="small_down(event)">
+									<img src="#" id="wrap-img_logo">
 									<p class="close_x">X</p>
-							 </div>  
-							 
-							<!-- 二维码 -->
-							<div hidden="hidden">
-								<input type="file" accept="image/*" onchange="getzImg_logoed(this)" value="" id="img_z_logoed"
-									   style="display:none"/>
-								<textarea id="img_z_base64_logoed"></textarea>
-							</div>
-							 <div id="smalled" class="pinch-zoom" onmousedown="small_downed(event)">
-								    <img src="#"  id="wrap-img_logoed">
+								</div>
+
+								<!-- 二维码 -->
+
+								<div hidden="hidden">
+									<input type="file" accept="image/*" onchange="getzImg_logoed(this)" value="" id="img_z_logoed" style="display:none" />
+									<textarea id="img_z_base64_logoed"></textarea>
+								</div>
+								<div id="smalled" class="pinch-zoom" onmousedown="small_downed(event)">
+									<img src="#" id="wrap-img_logoed">
 									<p class="close_xed">X</p>
-							 </div>  
-							
-						
-							<!-- 我是二维码 结束 -->
+								</div>
+
+								<!-- 早安 晚安 -->
+
+								<div id="text" class="pinch-zoom_text" onmousedown="small_downed_text(event)">
+									<img src="" alt="">
+									<p class="close_text">X</p>
+								</div>
+
+
+								<!-- 我是二维码 结束 -->
+							</div>
+							<div class="create_button">
+								<button class="btn_one" id="clicked" onclick="upload_logo(b)">
+									上传logo
+								</button>
+								<button class="btn_two" onclick="upload_logoed(c)">
+									<p id="clicked_logo" class="clicked">二维码</p>
+								</button>
+								<button class="btn_three" onclick="upload(a)">图片</button>
+								<!-- <a class="hold" style="font-size: 0.18rem;color: #000;" class="btn" id="download" href="javascript: ;" onclick="copyEle()">保存</a> -->
+								<button class="hold" id="btn" onclick="copyEle()"><a href="javascript:void(0);" class="btn" id="download"
+									 onclick="copyEle()">保存</a></button>
+							</div>
 						</div>
-						<div class="create_button">
-							<button class="btn_one" onclick="upload_logo(b)"><p id="clicked" class="clicked">上传logo</p></button>
-							<button class="btn_two" onclick="upload_logoed(c)"><p id="clicked_logo" class="clicked">二维码</p></button>
-							<button class="btn_three" onclick="upload(a)">图片</button>
-							<!-- <a class="hold" style="font-size: 0.18rem;color: #000;" class="btn" id="download" href="javascript: ;" onclick="copyEle()">保存</a> -->
-							<button class="hold" id="btn" onclick="copyEle()"><a href="javascript:void(0);" class="btn" id="download" onclick="copyEle()">保存</a></button>
-						</div>
-					</div>
-					<div class="element_style_center_buttons">
-						<div class="btn_button">
-							  <select  id="font_family" onchange="family()">
-							      <option value="Microsoft YaHei" style="font-family: 'Microsoft YaHei'" >微软雅黑</option>
-							      <option value="SimHei" style="font-family: simHei" id="id1">黑体</option>
-							      <option value="KaiTi" style="font-family: KaiTi">楷体</option>
-							      <option value="SimSun" style="font-family: SimSun">宋体</option>
-							      <option value="NSimSun" style="font-fami:NSimSun ">新宋体</option>
-							      <option value="STKaiti" style="font-family:STKaiti ">华文楷体</option>
-								  <option value="STXingkai" style="font-family: STXingkai">华文行楷</option>
-								  <option value="LiSu" style="font-family: LiSu">隶书</option>
-								  <option value="FangSong_GB2312" style="font-family: FangSong_GB2312">仿宋_GB2312</option>
-								  <option value="YouYuan" style="font-family: YouYuan">幼圆</option>
-								  <option value="Microsoft JhengHei" style="font-family: Microsoft JhengHei">微軟正黑體</option>
-								  <option value="MingLiU" style="font-family: MingLiU">細明體</option>
-							  </select>
-						</div>
-						<div class="btn_button">
-							 <select id="color" onchange="color()">
-							    <option value="black">黑色</option>
-							    <option value="red">红色</option>
-							    <option value="yellow">黄色</option>
-							    <option value="blue">蓝色</option>
-							</select>
-						</div>
-						<div class="btn_button">
-							<select id="font_size" onchange="font_size()">
-							        <option value="" style="font-family: 'Microsoft YaHei'">字体大小</option>
-							    	<option value="12px" style="font-family: simHei">12px</option>
-							    	<option value="16px" style="font-family: simHei">16px</option>
-							    	<option value="18px" style="font-family: simHei">18px</option>
-							    	<option value="20px" style="font-family: simHei">20px</option>
-							        <option value="22px" style="font-family: simHei">22px</option>
-							        <option value="24px" style="font-family: KaiTi">24px</option>
-							        <option value="26px" style="font-family: SimSun">26px</option>
-							        <option value="28px" style="font-fami:NSimSun ">28px</option>
-							        <option value="30px" style="font-family:STKaiti ">30px</option>
-							</select>
-						</div>
-						<div class="btn_button doenload" onclick="upload_logo(b)" >
-							上传logo
-						</div>
-						<div class="btn_button" onclick="upload_logoed(c)">
-							上传二维码
-						</div>
-						<div class="btn_button" onclick="upload(a)">
-							上传图片
-						</div>
-						<div class="baocun" onclick="copyEled()" >保存</div>
-					</div>
-					<div class="element_style_center_select" >
-						<div class="font">
-							<div class="chose" style="margin-left: 0.2rem;">
-								
-							    <select id="family" onchange="ziti()">
-							        <option value="Microsoft YaHei" style="font-family: 'Microsoft YaHei'" >微软雅黑</option>
-							        <option value="SimHei" style="font-family: simHei" id="id1">黑体</option>
-							        <option value="KaiTi" style="font-family: KaiTi">楷体</option>
-							        <option value="SimSun" style="font-family: SimSun">宋体</option>
-							        <option value="NSimSun" style="font-fami:NSimSun ">新宋体</option>
-							        <option value="STKaiti" style="font-family:STKaiti ">华文楷体</option>
+						<div class="element_style_center_buttons">
+							<div class="btn_button">
+								<p class="button random">随机生成</p>
+							</div>
+							<div class="btn_button">
+								<select id="font_family" onchange="family()">
+									<option value="Microsoft YaHei" style="font-family: 'Microsoft YaHei'">微软雅黑</option>
+									<option value="SimHei" style="font-family: simHei" id="id1">黑体</option>
+									<option value="KaiTi" style="font-family: KaiTi">楷体</option>
+									<option value="SimSun" style="font-family: SimSun">宋体</option>
+									<option value="NSimSun" style="font-fami:NSimSun ">新宋体</option>
+									<option value="STKaiti" style="font-family:STKaiti ">华文楷体</option>
 									<option value="STXingkai" style="font-family: STXingkai">华文行楷</option>
 									<option value="LiSu" style="font-family: LiSu">隶书</option>
 									<option value="FangSong_GB2312" style="font-family: FangSong_GB2312">仿宋_GB2312</option>
 									<option value="YouYuan" style="font-family: YouYuan">幼圆</option>
 									<option value="Microsoft JhengHei" style="font-family: Microsoft JhengHei">微軟正黑體</option>
 									<option value="MingLiU" style="font-family: MingLiU">細明體</option>
-							    </select>
-							
+								</select>
+								<div class="down"></div>
 							</div>
-							<div class="chose">
-								<select id="size" onchange="ziti_size()">
-								    <option value="" style="font-family: 'Microsoft YaHei'">字体大小</option>
+							<div class="btn_button">
+								<select id="color" onchange="color()">
+									<option>请选择颜色</option>
+									<option value="#000">黑色</option>
+									<option value="red">红色</option>
+									<option value="yellow">黄色</option>
+									<option value="blue">蓝色</option>
+									<option value="#800080">紫色</option>
+									<option value="#4B0082">靛青</option>
+									<option value="#FF4500">橙红色</option>
+									<option value="#FF7F50">珊瑚色</option>
+									<option value="#FF6347">番茄色</option>
+									<option value="#32CD32">酸橙绿</option>
+									<option value="#FFD700">金色</option>
+									<option value="#F5DEB3">小麦色</option>
+									<option value="#EE82EE">紫罗兰</option>
+									<option value="#FFEBCD">杏仁</option>
+									<option value="#A52A2A">棕色</option>
+									<option value="#800000">栗色</option>
+								</select>
+								<div class="down"></div>
+							</div>
+							<div class="btn_button">
+								<select id="font_size" onchange="font_size()">
+									<option value="" style="font-family: 'Microsoft YaHei'">字体大小</option>
 									<option value="12px" style="font-family: simHei">12px</option>
 									<option value="16px" style="font-family: simHei">16px</option>
 									<option value="18px" style="font-family: simHei">18px</option>
 									<option value="20px" style="font-family: simHei">20px</option>
-								    <option value="22px" style="font-family: simHei">22px</option>
-								    <option value="24px" style="font-family: KaiTi">24px</option>
-								    <option value="26px" style="font-family: SimSun">26px</option>
-								    <option value="28px" style="font-fami:NSimSun ">28px</option>
-								    <option value="30px" style="font-family:STKaiti ">30px</option>
+									<option value="22px" style="font-family: simHei">22px</option>
+									<option value="24px" style="font-family: KaiTi">24px</option>
+									<option value="26px" style="font-family: SimSun">26px</option>
+									<option value="28px" style="font-fami:NSimSun ">28px</option>
+									<option value="30px" style="font-family:STKaiti ">30px</option>
 								</select>
+								<div class="down"></div>
 							</div>
+							<div class="btn_button doenload" onclick="upload_logo(b)">
+								上传logo
+							</div>
+							<div class="btn_button" onclick="upload_logoed(c)">
+								上传二维码
+							</div>
+							<div class="btn_button" onclick="upload(a)">
+								上传图片
+							</div>
+							<div class="baocun" onclick="copyEled()">保存</div>
 						</div>
+						<div class="element_style_center_select">
+							<div class="font">
+								<div class="chose">
 
-                   <button style="margin-bottom: 5%;" class="fanyi transbtn" style="margin-right: 5%;">同步翻译</button>
-                   中文 <span style="font-size: 0.28rem;">⇋</span> 英文
-                   <div class="t-header" hidden="hidden">
-                    	<ul class="lang-panel">
-							<label>选择语种</label>
-                    		<li data-type="en" class="checked"> 英语</li>
-                    	   <li data-type="kor">韩语</li>
-						   
-                    	</ul>
-                    </div>
-					<!-- <div class="content"  id="smalled_text"  onmousedown="small_downed_text(event)"> -->
-					<div class="content"  id="smalled_text"  >
-						<button type="button" hidden="hidden" class="clear">清除</button>
-						<textarea class="input " style="border: 1px solid #000;"   placeholder="请输入你要翻译的单词或语句"></textarea>
-						<textarea class="output" placeholder="翻译结果" style="margin-top: 2%;"></textarea>
+									<select id="family" onchange="ziti()">
+										<option value="Microsoft YaHei" style="font-family: 'Microsoft YaHei'">微软雅黑</option>
+										<option value="SimHei" style="font-family: simHei" id="id1">黑体</option>
+										<option value="KaiTi" style="font-family: KaiTi">楷体</option>
+										<option value="SimSun" style="font-family: SimSun">宋体</option>
+										<option value="NSimSun" style="font-fami:NSimSun ">新宋体</option>
+										<option value="STKaiti" style="font-family:STKaiti ">华文楷体</option>
+										<option value="STXingkai" style="font-family: STXingkai">华文行楷</option>
+										<option value="LiSu" style="font-family: LiSu">隶书</option>
+										<option value="FangSong_GB2312" style="font-family: FangSong_GB2312">仿宋_GB2312</option>
+										<option value="YouYuan" style="font-family: YouYuan">幼圆</option>
+										<option value="Microsoft JhengHei" style="font-family: Microsoft JhengHei">微軟正黑體</option>
+										<option value="MingLiU" style="font-family: MingLiU">細明體</option>
+									</select>
+
+								</div>
+								<div class="chose">
+									<select id="size" onchange="ziti_size()">
+										<option value="" style="font-family: 'Microsoft YaHei'">字体大小</option>
+										<option value="12px" style="font-family: simHei">12px</option>
+										<option value="16px" style="font-family: simHei">16px</option>
+										<option value="18px" style="font-family: simHei">18px</option>
+										<option value="20px" style="font-family: simHei">20px</option>
+										<option value="22px" style="font-family: simHei">22px</option>
+										<option value="24px" style="font-family: KaiTi">24px</option>
+										<option value="26px" style="font-family: SimSun">26px</option>
+										<option value="28px" style="font-fami:NSimSun ">28px</option>
+										<option value="30px" style="font-family:STKaiti ">30px</option>
+									</select>
+								</div>
+							</div>
+							<div class="font" >
+								<div class="chose" >
+									<select id="pid" onchange="gradeChange()">
+										<option>请选择颜色</option>
+										<option value="#000">黑色</option>
+										<option value="red">红色</option>
+										<option value="yellow">黄色</option>
+										<option value="blue">蓝色</option>
+										<option value="#800080">紫色</option>
+										<option value="#4B0082">靛青</option>
+										<option value="#FF4500">橙红色</option>
+										<option value="#FF7F50">珊瑚色</option>
+										<option value="#FF6347">番茄色</option>
+										<option value="#32CD32">酸橙绿</option>
+										<option value="#FFD700">金色</option>
+										<option value="#F5DEB3">小麦色</option>
+										<option value="#EE82EE">紫罗兰</option>
+										<option value="#FFEBCD">杏仁</option>
+										<option value="#A52A2A">棕色</option>
+										<option value="#800000">栗色</option>
+									</select>
+								</div>
+								<div class="chose"  id="bold" style="line-height: 0.38rem;text-align: center;">
+									<p >加粗</p>
+								</div>
+							</div>
+							<button style="margin-bottom: 5%;" class="fanyi transbtn" style="margin-right: 3%;">同步翻译</button>
+							<span style="display: inline-block;float: right;margin-right: 0.1rem;margin-top: 0.2rem;">中文 <span style="font-size: 0.28rem;">⇋</span> 英文</span>
+							<div class="t-header" hidden="hidden">
+								<ul class="lang-panel">
+									<label>选择语种</label>
+									<li data-type="en" class="checked"> 英语</li>
+									<li data-type="kor">韩语</li>
+
+								</ul>
+							</div>
+							<!-- <div class="content"   "> -->
+							<div class="content" id="smalled_text">
+								<button type="button" hidden="hidden" class="clear">清除</button>
+								<textarea class="input " style="border: 1px solid #000;" placeholder="请输入你要翻译的单词或语句"></textarea>
+								<textarea class="output" placeholder="翻译结果" style="margin-top: 2%;"></textarea>
+							</div>
+
+						</div>
+						<p class="banquan">鲁ICP备19041262号 Copyright©2019 山东润橙信息技术有限公司版权所有</p>
 					</div>
-					
-                </div>
-					<p class="banquan">鲁ICP备19041262号  Copyright©2019 山东润橙信息技术有限公司版权所有</p>
-				</div>
-			</li>
-        </ul>
-    </section>
-    <!--footer-->
-   <footer >
-        <span class="footer" >~哎哟，哦也是有底线的~</span>
-		<!-- <br> -->
-        <span class="biao">鲁ICP备19041262号 Copyright©2019 </span>
-    </footer>
-   
-</div>
-<script src="../js/md5.js"></script>
-<script src="../js/fanyi.js"></script>
-<script src="../js/move.js"></script>
-<script src="../js/failes.js"></script>
-<script src="../js/tab_img.js"></script>
-<script src="../js/change_text.js"></script>
-<script src="../js/wenben.js"></script>
- <script src="../js/froala_editor.min.js"></script>
-  <!--[if lt IE 9]>
+				</li>
+			</ul>
+		</section>
+		<!--footer-->
+		<footer>
+			<span class="footer">~哎哟，哦也是有底线的~</span>
+			<!-- <br> -->
+			<span class="biao">鲁ICP备19041262号 Copyright©2019 </span>
+		</footer>
+		<div class="pop">
+			<div class="back"></div>
+			<img alt="" id="cunfang" class="popule">
+		</div>
+	</div>
+	<script src="../js/md5.js"></script>
+	<script src="../js/fanyi.js"></script>
+	<script src="../js/move.js"></script>
+	<script src="../js/failes.js"></script>
+	<script src="../js/tab_img.js"></script>
+	<script src="../js/change_text.js"></script>
+	<script src="../js/wenben.js"></script>
+	<script src="../js/down.js"></script>
+	<script src="../js/froala_editor.min.js"></script>
+	<!--[if lt IE 9]>
     <script src="../js/froala_editor_ie8.min.js"></script>
   <![endif]-->
-<script src="../js/colors.min.js"></script> 
-<script src="../js/font_family.min.js"></script>
-<script src="../js/font_size.min.js"></script>
-<script type="text/javascript">
-	
-	
-	
-	
-	 
-
-	
-	// 移入显示 
-	$(document).ready(function(){
-	       $("#small").mouseover(function (){
-				$(".close_x").show();
-			}).mouseout(function (){
-				$(".close_x").hide();
-			});
-		$("#smalled").mouseover(function (){
-			$(".close_xed").show();
-		}).mouseout(function (){
-			$(".close_xed").hide();
-		});
-	 })
-	
-	// 点击关闭logo 二维码
-	$(document).ready(function(){
-		$(".close_x").click(function(){
-			$("#small").css("display","none")
-		});
-		$(".close_xed").click(function(){
-			$("#smalled").css("display","none")
-		});
-	})
-
-	
-	
-	
-	
-	
-			
-		var system ={};
-			var p = navigator.platform;      
-			system.win = p.indexOf("Win") == 0; 
-			system.mac = p.indexOf("Mac") == 0; 
-			system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);    
-			if(system.win||system.mac||system.xll){//如果是电脑跳转到百度 
-				
-				function copyEled(){
-					
-				html2canvas(document.getElementById('container'), {
-				scale:2,logging:false,useCORS:true,allowTaint:false,useCORS:true,
-				onrendered: function(canvas) {
-					document.body.appendChild(canvas);
-					var tempSrc = canvas.toDataURL("image/png");
-					console.log(tempSrc)
-					var img = document.getElementById("cunfang");
-				    // svaeHref.href=tempSrc; 
-				    img.src=tempSrc; 
-				
-				}
-				//可以带上宽高截取你所需要的部分内容
-				// ,
-				// width: 300,
-				// height: 300
-				});
-				}
-				
-					
-			}else{  //如果是手机,跳转到谷歌
-			
-			$(function () {
-					 $(".pinch-zoom").click(function(e){
-						 e.stopPropagation()
-						 // alert("1")
-						 var cont=$("#barraged");
-						 var contW=$("#barraged").width();
-						 var contH=$("#barraged").height();            
-						 var startX,startY,sX,sY,moveX,moveY;        
-						 var winW=$(window).width();    
-						 var winH=$(window).height();
-						 var barrage_name=$("#barrage_named");
-						 var body=$("body");
-					   var startX, endX, scale, x1, x2, y1, y2, imgLeft, imgTop, imgWidth, imgHeight,
-					   		 one = false, 
-					   		 
-					   	
-					   	     $touch = $(".pinch-zoom img"),  //选择放大缩小的元素
-					   	     originalWidth = $touch.width(),
-					   		 originalHeight = $touch.height(),
-					   	     baseScale = parseFloat(originalWidth/originalHeight),
-					   	     imgData = [],
-					   	     bgTop = parseInt($(".pinch-zoom img").css('top'));
-					   	     function siteData(name) {
-					   	          imgLeft = parseInt(name.css('left'));
-					   	          imgTop = parseInt(name.css('top'));
-					   	          imgWidth = name.width();
-					   	          imgHeight = name.height();
-					   	      }
-					   	      $(".pinch-zoom img").on('touchstart touchmove touchend', $(".pinch-zoom img"), function(event){
-					   	
-					                var $me = $(".pinch-zoom img");
-					                
-					                touch1 = event.originalEvent.targetTouches[0],  // 第一根手指touch事件
-					    
-					                touch2 = event.originalEvent.targetTouches[1],  // 第二根手指touch事件
-					    
-					                fingers = event.originalEvent.touches.length;   // 屏幕上手指数量
-					    
-					                //手指放到屏幕上的时候，还没有进行其他操作
-					                if (event.type == 'touchstart') {
-					                    if (fingers == 2) {
-					                        // 缩放图片的时候X坐标起始值
-					                        startX = Math.abs(touch1.pageX - touch2.pageX);
-					                        one = false;
-					                    }else if (fingers == 1) {
-											x1 = touch1.pageX;
-											// alert(x1)
-											y1 = touch1.pageY;
-											
-											one = true;
-											//startX = e.originalEvent.targetTouches[0].pageX;    //获取点击点的X坐标
-											//alert(startX)
-											//startY = e.originalEvent.targetTouches[0].pageY;    //获取点击点的Y坐标
-											//console.log("startX="+startX+"************startY="+startY);
-											sX=$(this).offset().left;//相对于当前窗口X轴的偏移量
-											// alert(sX)
-											sY=$(this).offset().top;//相对于当前窗口Y轴的偏移量
-											// alert(sY)
-											//console.log("sX="+sX+"***************sY="+sY);
-											leftX=x1-sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
-											// alert(leftX)
-											rightX=winW-contW+leftX;//鼠标所能移动的最右端是当前窗口距离减去鼠标距div最右端位置
-											// alert(rightX)
-											topY=y1-sY;//鼠标所能移动最上端是当前鼠标距div上边距的位置
-											// alert(topY)
-											bottomY=winH-contH+topY;//鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端
-											// alert(bottomY)
-					                     
-					                     }
-					                 //siteData($me);
-					                 }
-					                 //手指在屏幕上滑动
-					                 else if (event.type == 'touchmove') {
-					                      if (fingers == 2) {
-					                      // 缩放图片的时候X坐标滑动变化值
-					                      endX = Math.abs(touch1.pageX - touch2.pageX);
-					                      scale = endX - startX;
-					             
-					                      $me.css({
-					                           'width' : originalWidth + scale,
-					                           'height' :originalWidth + scale
-					                      });  
-					                      
-					      				}else if (fingers == 1) {
-					                       x2 = touch1.pageX;
-					                       y2 = touch1.pageY;
-										   alert(y2)
-										   if(moveX<leftX){moveX=leftX;}
-										   if(moveX>rightX){moveX=rightX;}
-										   if(moveY<topY){moveY=topY;}
-										   if(moveY>bottomY){moveY=bottomY;}
-										   $(this).css({
-										       "left":moveX+sX-startX,
-										       "top":moveY+sY-startY,                    
-										       })
-					   //                     if (one) {
-					   //                          $me.css({
-					   //                          'left' : imgLeft + (x2 - x1),
-					   //                           'top' : imgTop + (y2 - y1)
-					   //                          });
-					   //                      }
-					   
-					   
-					   
-					                   }
-					             }
-					              //手指移开屏幕
-					             else if (event.type == 'touchend') {
-					             // 手指移开后保存图片的宽
-					                   originalWidth = $touch.width(),
-					                   siteData($me);
-					                           imgData = [[imgLeft, imgTop-bgTop, imgWidth, imgHeight],[0, 0, 640, 640]];
-					                       }
-					                   });
-					                   var getData = function(){
-					                       return imgData;
-					                   };
-					                   return {
-					                       imgData : getData
-					                   }
-					 });
-					    
-			     });
-					  $(function () {
-						   $(".pinch-zoomed").click(function(e){
-							   e.stopPropagation()
-							   alert("2")
-							   var startX, endX, scale, x1, x2, y1, y2, imgLeft, imgTop, imgWidth, imgHeight,
-							   		 two = false, 
-							   		 
-							   	
-							   	     $touch = $(".pinch-zoomed img"),  //选择放大缩小的元素
-							   	     originalWidth = $touch.width(),
-							   		 originalHeight = $touch.height(),
-							   	     baseScale = parseFloat(originalWidth/originalHeight),
-							   	     imgData = [],
-							   	     bgTop = parseInt($(".pinch-zoomed img").css('top'));
-							   	     function siteData(name) {
-							   	          imgLeft = parseInt(name.css('left'));
-							   	          imgTop = parseInt(name.css('top'));
-							   	          imgWidth = name.width();
-							   	          imgHeight = name.height();
-							   	      }
-							   	      $(".pinch-zoomed img").on('touchstart touchmove touchend', $(".pinch-zoomed img"), function(event){
-							   	
-							                var $me = $(".pinch-zoomed img");
-							                
-							                touch1 = event.originalEvent.targetTouches[0],  // 第一根手指touch事件
-							    
-							                touch2 = event.originalEvent.targetTouches[1],  // 第二根手指touch事件
-							    
-							                fingers = event.originalEvent.touches.length;   // 屏幕上手指数量
-							    
-							                //手指放到屏幕上的时候，还没有进行其他操作
-							                if (event.type == 'touchstart') {
-							                    if (fingers == 2) {
-							                        // 缩放图片的时候X坐标起始值
-							                        startX = Math.abs(touch1.pageX - touch2.pageX);
-							                        two = false;
-							                    }else if (fingers == 1) {
-							                        x1 = touch1.pageX;
-							                        y1 = touch1.pageY;
-							                        two = true;
-							                     }
-							                 //siteData($me);
-							                 }
-							                 //手指在屏幕上滑动
-							                 else if (event.type == 'touchmove') {
-							                      if (fingers == 2) {
-							                      // 缩放图片的时候X坐标滑动变化值
-							                      endX = Math.abs(touch1.pageX - touch2.pageX);
-							                      scale = endX - startX;
-							             
-							                      $me.css({
-							                           'width' : originalWidth + scale,
-							                           'height' :originalWidth + scale
-							                      });  
-							                      
-							      				}else if (fingers == 1) {
-							                       x2 = touch1.pageX;
-							                       y2 = touch1.pageY;
-							   //                     if (two) {
-							   //                          $me.css({
-							   //                          'left' : imgLeft + (x2 - x1),
-							   //                           'top' : imgTop + (y2 - y1)
-							   //                          });
-							   //                      }
-							                   }
-							             }
-							              //手指移开屏幕
-							             else if (event.type == 'touchend') {
-							             // 手指移开后保存图片的宽
-							                   originalWidth = $touch.width(),
-							                   siteData($me);
-							                           imgData = [[imgLeft, imgTop-bgTop, imgWidth, imgHeight],[0, 0, 640, 640]];
-							                       }
-							                   });
-							                   var getData = function(){
-							                       return imgData;
-							                   };
-							                   return {
-							                       imgData : getData
-							                   }
-						   })
-					  	     
-					        });
-			
-			
-			
-			
-				
-			}					
-
-   
-
-
-    //点击生成随机图片
-   $(function () {
-       $("#btn").click(function () {
-           $(".img_wp").css("display", "block");
-           $.ajax({
-               type: 'get',
-               dataType: 'json',
-               url: 'http://118.190.58.216/online/randomController/getrandomimageword',
-               success: function (data) {
-                   console.log("生成图片", data)
-                   console.log(photo_img)
-                   var photo = data.object
-                   var photo_img = photo.image
-                   var str = ''
-                   str += '<img src="' + photo_img.imagePath + '" />'
-                   $("#click_photo").html(str)
-   				var url = $("#click_photo img").attr("src")
-   				console.log(url)
-   				
-   				$('#click_photo img').attr('crossOrigin','anonymous') ;
-   				  $(".create_img").css("display", "none");
-   				demo()
-               },
-           })
-   
-       });
-   
-   })
-
-// 转化base64
-	
-function demo(){
-		var url =$("#click_photo img").attr("src")
-	    convertImgToBase64(url, function(base64Img){
-	    //转化后的base64
-	    // alert(base64Img);
-		$('#click_photo img').attr("src",base64Img)
-	    });
-	};
-	//实现将项目的图片转化成base64
-	function convertImgToBase64(url, callback, outputFormat){
-	    var canvas = document.createElement('CANVAS'),
-	  　　ctx = canvas.getContext('2d'),
-	  　　img = new Image;
-	  　　img.crossOrigin = 'Anonymous';
-	  　　img.onload = function(){
-	    　　canvas.height = img.height;
-	    　　canvas.width = img.width;
-	    　　ctx.drawImage(img,0,0);
-	    　　var dataURL = canvas.toDataURL(outputFormat || 'image/png');
-	    　　callback.call(this, dataURL);
-	    　　canvas = null;
-	    };
-	  　　img.src = url;
-	  console.log(img.src)
-	}
-
-
-
-
-   
-	
-	// 下载
-	function copyEle(){
+	<script src="../js/colors.min.js"></script>
+	<script src="../js/font_family.min.js"></script>
+	<script src="../js/font_size.min.js"></script>
+	<script src="../js/1.js"></script>
+	<script>
 		
-	html2canvas(document.getElementById('container'), {
-	scale:2,logging:false,useCORS:true,allowTaint:false,useCORS:true,
-	onrendered: function(canvas) {
-		document.body.appendChild(canvas);
-	//把截取到的图片替换到a标签的路径下载
-	document.getElementById('download').setAttribute('href',canvas.toDataURL());
-	//下载下来的图片名字
-	document.getElementById('download').setAttribute('download','下载.png') ;
-	
-	}
-	//可以带上宽高截取你所需要的部分内容
-	// ,
-	// width: 300,
-	// height: 300
-	});
-	}
-
-
-</script>
-</body>
+	</script>
+	</body>
 </html>

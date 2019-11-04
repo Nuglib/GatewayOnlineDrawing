@@ -239,18 +239,19 @@ $(function () {
 $(function(){
 	// PC
 	$(".element_style_center_photo img").click(function(){
-		$("#wrap-img_logo").css("display","block")
+		$("#text").css("display","block")
 		var m=$(this).attr("src")
-		$("#small img").attr("src",m)
+		$("#text img").attr("src",m)
 		alert($(this).attr("src")); 
 	})
 	// 手机
 	$(".four_img img").click(function(){
-		$("#wrap-img_logo").css("display","block")
+		$("#text").css("display","block")
 		var m=$(this).attr("src")
-		$("#small img").attr("src",m)
+		$("#text img").attr("src",m)
 		alert($(this).attr("src")); 
 	})
+	
 })
 
 
@@ -395,3 +396,100 @@ $(function () {
 
 
 
+//点击生成随机图片
+		$(function() {
+			$(".random").click(function() {
+				$(".img_wp img").css("display", "block");
+				$.ajax({
+					type: 'get',
+					dataType: 'json',
+					url: 'http://118.190.58.216/online/randomController/getrandomimageword',
+					success: function(data) {
+						console.log("生成图片", data)
+						console.log(photo_img)
+						var photo = data.object
+						var photo_img = photo.image
+						var str = ''
+						str += '<img src="' + photo_img.imagePath + '" />'
+						$("#click_photo").html(str)
+						var url = $("#click_photo img").attr("src")
+						console.log(url)
+
+						$('#click_photo img').attr('crossOrigin', 'anonymous');
+						$(".create_img").css("display", "none");
+						demo()
+					},
+				})
+
+			});
+
+		})
+
+		// 转化base64
+
+		function demo() {
+			var url = $("#click_photo img").attr("src")
+			convertImgToBase64(url, function(base64Img) {
+				//转化后的base64
+				// alert(base64Img);
+				$('#click_photo img').attr("src", base64Img)
+			});
+		};
+
+		function demoed() {
+			var url = $(".pop img").attr("src")
+			convertImgToBase64(url, function(base64Img) {
+				//转化后的base64
+				alert(base64Img);
+				$('.pop img').attr("src", base64Img)
+			});
+		};
+		//实现将项目的图片转化成base64
+		function convertImgToBase64(url, callback, outputFormat) {
+			var canvas = document.createElement('CANVAS'),
+				ctx = canvas.getContext('2d'),
+				img = new Image;
+			img.crossOrigin = 'Anonymous';
+			img.onload = function() {
+				canvas.height = img.height;
+				canvas.width = img.width;
+				ctx.drawImage(img, 0, 0);
+				var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+				callback.call(this, dataURL);
+				canvas = null;
+			};
+			img.src = url;
+			// console.log(img.src)
+		}
+		
+		
+		// 移入显示  关闭图片
+		$(document).ready(function() {
+		
+			$("#small").mouseover(function() {
+				$(".close_x").show();
+			}).mouseout(function() {
+				$(".close_x").hide();
+			});
+			$("#smalled").mouseover(function() {
+				$(".close_xed").show();
+			}).mouseout(function() {
+				$(".close_xed").hide();
+			});
+			$("#text").mouseover(function() {
+				$(".close_text").show();
+			}).mouseout(function() {
+				$(".close_text").hide();
+			});
+		
+			// 点击关闭logo 二维码
+			$(".close_x").click(function() {
+				$("#small").css("display", "none")
+			});
+			$(".close_xed").click(function() {
+				$("#smalled").css("display", "none")
+			});
+			$(".close_text").click(function() {
+				$("#text").css("display", "none")
+			});
+		})

@@ -69,9 +69,9 @@ select{
     }
 
     .header_left {
-        width: 18%;
+        width: 15%;
         height: 85%;
-        margin-right: 1.58rem;
+        margin-right: 20%;
         margin-left: 0.71rem !important;
     }
 
@@ -171,7 +171,7 @@ input::-webkit-input-placeholder {
 }
 @media (min-width: 768px) {
 	.notice {
-	    height: 0.47rem;
+	    height: 0.48rem;
 	    font-size: 0.18rem;
 	}
 	
@@ -535,8 +535,9 @@ input::-webkit-input-placeholder {
 		display: block!important;
 	}
 	.element_style_more,.element_style_mored {
-	    width: 0.6rem;
-	    height: 0.24rem;
+	    width: 0.7rem;
+	    height: 0.26rem;
+		line-height: 0.28rem;
 	    background: #ff7901;
 	    text-align: center;
 	    position: absolute;
@@ -581,7 +582,6 @@ input::-webkit-input-placeholder {
 	/* 第二个文字 */
 	.element_style_center_li_two {
 	    height: 3.22rem;
-		background: red;
 	}
 	.element_style_center_li_two>.element_style_center_bottom{
 		width: 100%;
@@ -590,7 +590,6 @@ input::-webkit-input-placeholder {
 	.tu_wen{
 		width: 100%;
 		height: 3.22rem;
-		background: #FFF;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -608,7 +607,7 @@ input::-webkit-input-placeholder {
 	}
 	.tu_wen>.element_style_title_test p{
 		margin: 0;
-		
+		/* font-size: 0.34rem; */
 	}
 	.tu_wen>.element_style_title_test:nth-child(3){
 		display: none!important;
@@ -693,6 +692,7 @@ input::-webkit-input-placeholder {
     color: #009111;
     background: #FFD5D5;
     border-radius: 0.1rem;
+	width: 34%;
 }
 .element_style_titled p{
 	margin: 0;
@@ -721,6 +721,9 @@ input::-webkit-input-placeholder {
 /* 上传图片的组半部分 */
 /* 网页 */
 @media (min-width: 768px) {
+	.element_style_titled{
+		width: 25%;
+	}
 	.element_style_center_li_three {
 	
 	    height: 6.34rem;
@@ -836,7 +839,7 @@ input::-webkit-input-placeholder {
 		background: #3950fe;
 		height: 0.4rem;
 		line-height: 0.4rem;
-		margin-top: 8%;
+		margin-top: 5%;
 		border-radius: 0.1rem;
 		color: #fff;
 	}
@@ -875,7 +878,7 @@ input::-webkit-input-placeholder {
 	}
 	
 	.btn_one, .btn_two, .btn_three,.hold {
-		padding: 0 3%;
+		/* padding: 0 3%; */
 	    height: 0.4rem;
 		line-height: 0.4rem;
 	    display: flex;
@@ -887,6 +890,7 @@ input::-webkit-input-placeholder {
 	    color: #000;
 	    background: #FE6551;
 		outline-style: none;
+		width: 20%;
 	}
 	
 	.clicked {
@@ -937,6 +941,11 @@ input::-webkit-input-placeholder {
 	   left: 45%;
 	   margin: auto;
 	}
+	.beijing{
+		width: 100%;
+		height: 100%;
+		/* display: none; */
+	}
 }
 
 /* 手机 */
@@ -948,6 +957,9 @@ input::-webkit-input-placeholder {
 	    width: 100%;
 	    height: 100%;
 	    border-radius: 0.1rem;
+	}
+	.img_wp img{
+		
 	}
 	.news_text {
 	    height: 2.25rem !important;
@@ -968,7 +980,6 @@ input::-webkit-input-placeholder {
 	    width: 97%;
 	    margin: auto;
 		height: 5.1rem;
-	    background: sandybrown;
 		
 	}
 	.element_style_img_right{
@@ -994,17 +1005,23 @@ input::-webkit-input-placeholder {
 	.create {
 	    width: 100%;
 	    height: 100%;
-	    /* background: #E6E6E6; */
-	    /*margin-top: 7%;*/
+	   
 	    position: relative;
 	}
 	.img_wp {
 	    width: 100%;
 	    height: 100%;
-	    background-image: url(../img/shangchuan_img.png);
-		background-size: 100% 100%;
+	    /* background-image: url(../img/shangchuan_img.png); */
+		/* background-size: 100% 100%; */
 	}
-	
+	.beijing{
+		display: block!important;
+	}
+	.img_wp img {
+	    width: 100%;
+	    height: 100%;
+	    
+	}
 	.element_style_center_buttons{
 		width: 30%;
 		height: 100%;
@@ -1018,12 +1035,18 @@ input::-webkit-input-placeholder {
 		background-size: 100% 100%;
 		margin-top: 6%;
 		color: #FC8109;
-		font-size: .28rem;
+		font-size: 0.28rem;
 		text-align: center;
+		position: relative;
+		overflow: hidden;
 	}
 	.btn_button select{
 		display: flex;
 		align-items: center;
+		width: 120%;
+		height: 0.46rem;
+		line-height: 0.46rem;
+		font-size: 0.28rem;
 	}
 	.baocun{
 		width: 0.8rem;
@@ -1031,10 +1054,10 @@ input::-webkit-input-placeholder {
 		line-height: 0.8rem;
 		text-align: center;
 		border-radius: 50%;
-		
+		color:#fff;
 		margin: auto;
 		font-size: 0.28rem;
-		background: saddlebrown;
+		background: #FF9000;
 		margin-top: 0.31rem!important;
 	}
 	.doenload{
@@ -1075,15 +1098,27 @@ input::-webkit-input-placeholder {
 	   margin: auto;
 	}
 	#smalled {
-	   width: 80px;  
-	   height: 80px;  
+	   width: 1rem;  
+	   height: 1rem;  
 	   position: absolute;  
 	   cursor: pointer;  
-	   top: 70%;
+	   top: 75%;
 	   left: 45%;
 	   margin: auto;
 	}
-	
+	.main{
+		width: 1rem;
+		height: 1rem;  
+		position: absolute;  
+		cursor: pointer;  
+		top: 75%;
+		left: 45%;
+		margin: auto;
+	}
+	.main img{
+		width: 100%;
+		height: 100%;
+	}
 }
 
 
@@ -1092,7 +1127,6 @@ input::-webkit-input-placeholder {
 .img_wp {
     width: 100%;
     height: 100%;
-    border: 1px solid #000;
     z-index: 99;
 }
 
@@ -1125,15 +1159,17 @@ input::-webkit-input-placeholder {
 
 .font{
 	width: 100%;
-	height: 0.6rem;
+	/* height: 0.6rem; */
 	display: flex;
 	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-between;
 }
 .chose {
     width: 40%;
     height: 0.38rem;
     background: #FBDBE9;
-    margin-top: 0.23rem;
+    margin-top: 0.18rem;
     border-radius: 0.1rem;
 	
 }
@@ -1143,7 +1179,7 @@ input::-webkit-input-placeholder {
 select {
     /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
     /*border: solid 1px #000;*/
-    width: 100%;
+    width: 98%;
     height: 0.38rem;
     padding-left: 5%;
     display: block;
@@ -1155,11 +1191,11 @@ select {
     -webkit-appearance: none;
     /*在选择框的最右侧中间显示小箭头图片*/
 	/* background: url("../img/xiala.png") no-repeat scroll right center transparent ; */
-    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    background: url("../img/down.png") no-repeat scroll right center transparent;
     outline: none;
     /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-    padding-right: 14px;
-	
+    /* padding-right: 14px; */
+	appearance:none;
 }
 
 option {
@@ -1265,14 +1301,12 @@ select::-ms-expand {
 	}
 
 	
-	#smalled:hover{
-		border: 0.01rem solid #5e5e5e;
-	}
-	.close_x,.close_xed{
+	
+	.close_x,.close_xed,.close_text{
 		position: absolute;
 		right: 2%;
 		top: 0;
-		font-size: 0.12rem;
+		font-size: 0.18rem;
 		color: #5e5e5e;
 		display: none;
 	}
@@ -1291,6 +1325,9 @@ select::-ms-expand {
 	   background-image: none!important;
 	}
 
+	.froala-element{
+		overflow: hidden;
+	}
 
 			
 			
@@ -1358,7 +1395,7 @@ select::-ms-expand {
 		background: #3950fe;
 		height: 0.4rem;
 		line-height: 0.4rem;
-		margin-top: 8%;
+		margin-top: 5%;
 		border-radius: 0.1rem;
 		color: #fff;
 	}
@@ -1446,18 +1483,49 @@ select::-ms-expand {
 	
 	
 	/* 弹窗 */
-	
-	.popule{
+	.pop{
+		width: 100%;
+		height: 100%;
+		
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		display: none;
+	}
+	.back{
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		background: #000;
+		opacity: 0.8;
+	}
+	.popule{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	label{
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		top: 10%;
+		left: 0;
+		right: 0;
+		/* bottom: 0; */
 		margin: auto;
 		z-index: 666;
-		display: none;
 	}
-	
 	
 	
 	.froala-editor button.fr-bttn, .froala-editor button.fr-trigger {
@@ -1467,3 +1535,30 @@ select::-ms-expand {
 	 
 	
 	}
+	.down{
+		width: 6px;
+		height: 6px;
+		border-right: #FC8109 solid 0.02rem;
+		border-bottom: #FC8109 solid 0.02rem;
+		transform: translateY(-50%) rotate(45deg);
+		transform: translateY(-50%) rotate(45deg);
+		position: absolute;
+		bottom: 28%;
+		right: 9%;
+		margin: auto;
+	}
+	
+	#text{
+		width: 80px;
+		height: 80px;
+		position: absolute;
+		cursor: pointer;
+		top: 20%;
+		left:0%;
+		margin: auto;
+	}
+	#text img{
+		width: 100%;
+		height: 100%;
+	}
+	
